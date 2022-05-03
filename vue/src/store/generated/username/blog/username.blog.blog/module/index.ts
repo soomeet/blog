@@ -45,9 +45,9 @@ const txClient = async (wallet: OfflineSigner, { addr: addr }: TxClientOptions =
 
   return {
     signAndBroadcast: (msgs: EncodeObject[], { fee, memo }: SignAndBroadcastOptions = {fee: defaultFee, memo: ""}) => client.signAndBroadcast(address, msgs, fee,memo),
-    msgCreateComment: (data: MsgCreateComment): EncodeObject => ({ typeUrl: "/soomeet.blog.blog.MsgCreateComment", value: MsgCreateComment.fromPartial( data ) }),
-    msgDeleteComment: (data: MsgDeleteComment): EncodeObject => ({ typeUrl: "/soomeet.blog.blog.MsgDeleteComment", value: MsgDeleteComment.fromPartial( data ) }),
-    msgCreatePost: (data: MsgCreatePost): EncodeObject => ({ typeUrl: "/soomeet.blog.blog.MsgCreatePost", value: MsgCreatePost.fromPartial( data ) }),
+    msgCreateComment: (data: MsgCreateComment): EncodeObject => ({ typeUrl: "/username.blog.blog.MsgCreateComment", value: MsgCreateComment.fromPartial( data ) }),
+    msgDeleteComment: (data: MsgDeleteComment): EncodeObject => ({ typeUrl: "/username.blog.blog.MsgDeleteComment", value: MsgDeleteComment.fromPartial( data ) }),
+    msgCreatePost: (data: MsgCreatePost): EncodeObject => ({ typeUrl: "/username.blog.blog.MsgCreatePost", value: MsgCreatePost.fromPartial( data ) }),
     
   };
 };
@@ -64,3 +64,4 @@ export {
   txClient,
   queryClient,
 };
+MsgDeleteComment
